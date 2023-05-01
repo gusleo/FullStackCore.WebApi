@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Scaffolding\Scaffolding.Service\Scaffolding.Service.csproj" />
+    <ProjectReference Include="..\Core.Data.Infrastructure\Core.Data.Infrastructure.csproj" />
+    <ProjectReference Include="..\Core.Service.Infrastructure\Core.Service.Infrastructure.csproj" />
+    <ProjectReference Include="..\Core.Service.Models\Core.Service.Models.csproj" />
+  </ItemGroup>
+
+</Project>

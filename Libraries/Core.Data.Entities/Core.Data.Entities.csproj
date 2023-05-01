@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Scaffolding\Scaffolding.Auth\Scaffolding.Auth.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Scaffolding.Data">
+      <HintPath>..\..\Scaffolding\Scaffolding.Data\obj\Debug\net6.0\ref\Scaffolding.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
