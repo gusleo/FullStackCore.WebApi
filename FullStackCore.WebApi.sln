@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullStackCore.WebApi", "FullStackCore.WebApi\FullStackCore.WebApi.csproj", "{3CB6CB98-6EA0-41BD-9FAB-692F2C683B2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullStackCore.WebApi", "FullStackCore.WebApi\FullStackCore.WebApi.csproj", "{3CB6CB98-6EA0-41BD-9FAB-692F2C683B2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scaffolding", "Scaffolding", "{EB0BD6A5-74CE-419D-9595-190429BC001E}"
 EndProject
@@ -15,29 +15,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Service", "Scaf
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{E968D14B-C52C-4FA1-AC6A-3C9EB0D24D21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Services", "Libraries\Core.Services\Core.Services.csproj", "{AB47290A-02E3-4E4C-A428-6A963DE8D85E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Services", "Libraries\Core.Services\Core.Services.csproj", "{AB47290A-02E3-4E4C-A428-6A963DE8D85E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLayer", "DataLayer", "{4F737F06-1B0D-4162-AA76-E106DB67069E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Data.Entities", "Libraries\Core.Data.Entities\Core.Data.Entities.csproj", "{85DC7401-7861-4EC0-8FBC-4BBE41368E94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Data.Entities", "Libraries\Core.Data.Entities\Core.Data.Entities.csproj", "{85DC7401-7861-4EC0-8FBC-4BBE41368E94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Data.Repositories", "Libraries\Core.Data.Repositories\Core.Data.Repositories.csproj", "{79D15119-D62E-449F-A8C7-25D24D8BDE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Data.Repositories", "Libraries\Core.Data.Repositories\Core.Data.Repositories.csproj", "{79D15119-D62E-449F-A8C7-25D24D8BDE7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Data.Infrastructure", "Libraries\Core.Data.Infrastructure\Core.Data.Infrastructure.csproj", "{9B934BDE-22B9-4AC0-A3D4-A9FEE2773E4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Data.Infrastructure", "Libraries\Core.Data.Infrastructure\Core.Data.Infrastructure.csproj", "{9B934BDE-22B9-4AC0-A3D4-A9FEE2773E4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service.Infrastructure", "Libraries\Core.Service.Infrastructure\Core.Service.Infrastructure.csproj", "{49B6A280-3326-49FD-9A04-7B14940D558C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Service.Infrastructure", "Libraries\Core.Service.Infrastructure\Core.Service.Infrastructure.csproj", "{49B6A280-3326-49FD-9A04-7B14940D558C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Data", "Libraries\Core.Data\Core.Data.csproj", "{5AE23A49-29FA-44F4-826D-4EFB8F7AE02D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service.Services", "Libraries\Core.Service.Services\Core.Service.Services.csproj", "{6160343A-0B93-4A65-BBE4-3ED1CF7E0E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Service.Services", "Libraries\Core.Service.Services\Core.Service.Services.csproj", "{6160343A-0B93-4A65-BBE4-3ED1CF7E0E8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service.Models", "Libraries\Core.Service.Models\Core.Service.Models.csproj", "{7A124A68-9209-41D2-915E-DED0F991109B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Service.Models", "Libraries\Core.Service.Models\Core.Service.Models.csproj", "{7A124A68-9209-41D2-915E-DED0F991109B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLayer", "ServiceLayer", "{809CBF61-12DF-4085-9360-240A6BF61242}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Data", "Scaffolding\Scaffolding.Data\Scaffolding.Data.csproj", "{70FD8114-1F17-4D9A-B475-ADBE27E0185D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.Server", "Authorize.Server\Authorization.Server.csproj", "{68685412-0681-4C17-8EF8-3A842BD00B27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Server", "Authorize.Server\Authorization.Server.csproj", "{68685412-0681-4C17-8EF8-3A842BD00B27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

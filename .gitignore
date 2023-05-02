@@ -362,3 +362,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 Config.txt
+/Authorize.Server/setting cert.png
+/Authorize.Server/Certificate
+/FullStackCore.WebApi/appsettings.Development.json
+/FullStackCore.WebApi/appsettings.json

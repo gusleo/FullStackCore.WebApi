@@ -8,15 +8,16 @@ namespace FullStackCore.WebApi.CronJob;
 public class CronJobHostedService : IHostedService
 {
     private readonly IServiceProvider _serviceProvider;
-    private readonly ICoreContext coreContext;
+    private readonly ICoreContext _coreContext;
 
     /// <summary>
     /// Initialize
     /// </summary>
     /// <param name="serviceProvider"></param>
-    public CronJobHostedService(IServiceProvider serviceProvider)
+    public CronJobHostedService(IServiceProvider serviceProvider, ICoreContext context)
     {
         _serviceProvider = serviceProvider;
+        _coreContext = context;
     }
 
     /// <summary>

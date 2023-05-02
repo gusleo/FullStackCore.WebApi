@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace FullStackCore.WebApi.Filters;
 
@@ -22,6 +23,8 @@ public class ErrorHandlingFilter : IActionFilter, IOrderedFilter
         if (context.Exception != null)
         {
             _logger.LogError(context.Exception, "An error occurred while processing the request.");
+            context.Result = new StatusCodeResult(500);
+            context.ExceptionHandled = true;
         }
     }
 }

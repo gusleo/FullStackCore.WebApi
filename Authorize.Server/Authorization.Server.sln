@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Server", "Aut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Auth", "..\Scaffolding\Scaffolding.Auth\Scaffolding.Auth.csproj", "{42D183D0-FE91-47B0-96BB-D8672E4780C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePortal.Data", "..\Library\OnePortal.Data\OnePortal.Data.csproj", "{BD34C5EC-F710-46D8-858E-56EAA2A77B56}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{42D183D0-FE91-47B0-96BB-D8672E4780C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D183D0-FE91-47B0-96BB-D8672E4780C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D183D0-FE91-47B0-96BB-D8672E4780C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD34C5EC-F710-46D8-858E-56EAA2A77B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD34C5EC-F710-46D8-858E-56EAA2A77B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD34C5EC-F710-46D8-858E-56EAA2A77B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD34C5EC-F710-46D8-858E-56EAA2A77B56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -168,7 +168,6 @@ builder.Services
     .AddMvcCore(option => {
         // add custom filter
         option.Filters.Add(new ValidateModelStateFilter()); // add validate model state filter
-        option.Filters.Add(new ErrorHandlingFilter()); // add error handling filter
      })
 .AddApiExplorer(); // add api explorer to expose api metadata
 
@@ -208,8 +207,9 @@ app.UseAuthorization();
 
 app.UseHangfireDashboard("/hangfire", new DashboardOptions
 {
-    Authorization = new[] { app.Services.GetRequiredService<IDashboardAuthorizationFilter>() }
+    Authorization = new[] { new HangfireAuthorizationFilter() }
 });
+
 
 app.MapControllers();
 
