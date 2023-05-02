@@ -11,7 +11,7 @@ using Scaffolding.Service.Infrastructure;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace FullStackCore.WebApi.Controllers.Common.V1;
+namespace FullStackCore.WebApi.Controllers.Common.v1;
 
 [ApiController]
 [ApiVersion("1.0")]

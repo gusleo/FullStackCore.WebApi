@@ -36,8 +36,6 @@
     <None Remove="Controllers\Common\V1\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\Common\" />
-    <Folder Include="Controllers\Admin\" />
-    <Folder Include="Controllers\Common\V1\" />
+    <Folder Include="Controllers\Common\v1\" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
-##SSL Certificate to Azure##
+# OpenIDDict Project
 
-###Generate SSL##
-1. To created an SSL with openssl, execute the following command:
+### Generate SSL
+1. To created a SSL with openssl, execute the following command:
 ```
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365
 ```
@@ -17,14 +17,14 @@ openssl pkcs12 -export -in cert.pem -inkey key.pem -certpbe PBE-SHA1-3DES -out c
 ```
 services.AddOpenIddict().AddServer(options =>
 {
-	if (CurrentEnvironment.IsDevelopment())
+    if (CurrentEnvironment.IsDevelopment())
     {
         options.AddDevelopmentEncryptionCertificate().AddDevelopmentSigningCertificate();
     }
     else
     {
-	    options.AddSigningCertificate(new X509Certificate2("cert.pfx", pass, X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.Exportable));
-	    options.AddEncryptionCertificate(new X509Certificate2("encrypted.pfx", pass, X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.Exportable));
+        options.AddSigningCertificate(new X509Certificate2("cert.pfx", pass, X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.Exportable));
+        options.AddEncryptionCertificate(new X509Certificate2("encrypted.pfx", pass, X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.Exportable));
     }
 })
 ```
