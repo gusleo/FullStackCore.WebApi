@@ -133,7 +133,7 @@ string connString = builder.Configuration.GetConnectionString("DefaultConnection
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDatabaseLayer(connString);
 builder.Services.AddServiceLayer();
-builder.Services.AddLogger();
+//builder.Services.AddLogger();
 
 #region Hangfire
 builder.Services.AddHangfire(configuration => configuration
@@ -147,7 +147,7 @@ builder.Services.AddHangfireServer();
 #endregion
 
 
-builder.Services.AddHostedService<CronJobHostedService>();
+//builder.Services.AddHostedService<CronJobHostedService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",

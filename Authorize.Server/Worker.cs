@@ -1,10 +1,9 @@
 using System;
-using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
+using Core.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnePortal.Data;
 using OpenIddict.Abstractions;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
@@ -21,7 +20,7 @@ public class Worker : IHostedService
     {
         using var scope = _serviceProvider.CreateScope();
 
-        var context = scope.ServiceProvider.GetRequiredService<PortalCoreContext>();
+        var context = scope.ServiceProvider.GetRequiredService<CoreContext>();
         await context.Database.EnsureCreatedAsync(cancellationToken);
 
         await RegisterApplicationsAsync(scope.ServiceProvider, cancellationToken);

@@ -9,7 +9,7 @@ namespace Core.Services.Extensions
     {
         public static void AddDatabaseLayer(this IServiceCollection services, string connectionString){
             services.AddScoped<ICoreContext>(provider => provider.GetService<CoreContext>());
-            services.AddScoped<CoreUnitOfWork, CoreUnitOfWork>();
+            services.AddScoped<ICoreUnitOfWork, CoreUnitOfWork>();
             services.AddDbContext<CoreContext>(
                 opt => {
                     opt.UseSqlServer(connectionString);
