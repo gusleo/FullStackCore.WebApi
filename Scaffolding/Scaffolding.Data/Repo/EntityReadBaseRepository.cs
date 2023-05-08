@@ -96,7 +96,7 @@ namespace Scaffolding.Data.Repo
         }
         public virtual async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate)
         {
-            return await _context.Set<T>().Where(predicate).OrderByDescending(x => x.Id).ToListAsync();
+            return await _context.Set<T>().Where(predicate).OrderByDescending(x => x.CreatedDate).ToListAsync();
         }
         public virtual async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties)
         {
