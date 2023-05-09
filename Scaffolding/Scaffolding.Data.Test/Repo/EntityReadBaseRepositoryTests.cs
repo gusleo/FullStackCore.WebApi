@@ -18,7 +18,6 @@ namespace Scaffolding.Tests
         [SetUp]
         public void SetUp()
         {
-            
 
             _mockDbContext = new Mock<IDataContext>();
 

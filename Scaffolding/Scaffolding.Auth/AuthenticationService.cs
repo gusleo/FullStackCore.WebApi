@@ -32,7 +32,7 @@ namespace Scaffolding.Auth
         
         public async Task<ApplicationUser?> GetCurrentUserAsync()
         {
-            var claim = _context.User.Claims.Where(c => c.Type.Equals("sub")).FirstOrDefault();
+            var claim = _context.User == null ? null : _context.User.Claims.Where(c => c.Type.Equals("sub")).FirstOrDefault();
             if(claim != null)
                 return await _userManager.FindByIdAsync(claim.Value);
             return null;

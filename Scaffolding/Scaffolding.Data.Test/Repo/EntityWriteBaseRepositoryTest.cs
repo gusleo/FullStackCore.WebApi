@@ -1,7 +1,6 @@
 using MockQueryable.Moq;
 using Moq;
 using Scaffolding.Data.Repo;
-using Scaffolding.Data.Repo.Test;
 using Scaffolding.Data.Test.Entities;
 
 namespace Scaffolding.Data.Test.Repo
@@ -9,37 +8,37 @@ namespace Scaffolding.Data.Test.Repo
     [TestFixture]
     public class EntityWriteBaseRepositoryTests
     {
-        private Mock<IDataContext> _contextMock;
+        private Mock<IDataContext> _mockDbContext;
         private EntityWriteBaseRepository<TestEntity> _repository;
+        private List<TestEntity> _entities = GenerateData();
 
         [SetUp]
         public void SetUp()
         {
-            _contextMock = new Mock<IDataContext>();
+            _mockDbContext = new Mock<IDataContext>();
 
-            // set DbSet<TestEntity>
-            var data = new List<TestEntity>()
-            {
-                new TestEntity {Id = Guid.NewGuid()},
-            };
-            var mock = data.AsQueryable().BuildMockDbSet();
-            //assign mock to context
-            _contextMock.Setup(x => x.Set<TestEntity>()).Returns(mock.Object);
+            //2 - build mock by extension
+            var mock = _entities.AsQueryable().BuildMockDbSet();
 
-            _repository = new EntityWriteBaseRepository<TestEntity>(_contextMock.Object);
+            _mockDbContext.Setup(c => c.Set<TestEntity>()).Returns(mock.Object);
+            _repository = new EntityWriteBaseRepository<TestEntity>(_mockDbContext.Object);
         }
 
         [Test]
         public void Add_AddsEntityToContext()
         {
             // Arrange
-            var entity = new TestEntity();
+            var entity = new TestEntity()
+            {
+                Id = Guid.NewGuid(),
+                Name = "Test",
+            };
 
             // Act
             _repository.Add(entity);
 
             // Assert
-            _contextMock.Verify(x => x.Set<TestEntity>().Add(entity), Times.Once);
+            _mockDbContext.Verify(x => x.Set<TestEntity>().Add(entity), Times.Once);
         }
 
         [Test]
@@ -52,7 +51,7 @@ namespace Scaffolding.Data.Test.Repo
             _repository.AddRange(entities);
 
             // Assert
-            _contextMock.Verify(x => x.Set<TestEntity>().AddRange(entities), Times.Once);
+            _mockDbContext.Verify(x => x.Set<TestEntity>().AddRange(entities), Times.Once);
         }
 
         [Test]
@@ -65,7 +64,7 @@ namespace Scaffolding.Data.Test.Repo
             _repository.Edit(entity);
 
             // Assert
-            _contextMock.Verify(x => x.Updated<TestEntity>(entity), Times.Once);
+            _mockDbContext.Verify(x => x.Updated<TestEntity>(entity), Times.Once);
         }
 
         [Test]
@@ -78,7 +77,7 @@ namespace Scaffolding.Data.Test.Repo
             _repository.Delete(entity);
 
             // Assert
-            _contextMock.Verify(x => x.Set<TestEntity>().Remove(entity), Times.Once);
+            _mockDbContext.Verify(x => x.Set<TestEntity>().Remove(entity), Times.Once);
         }
 
         [Test]
@@ -91,7 +90,7 @@ namespace Scaffolding.Data.Test.Repo
             _repository.DeleteRange(entities);
 
             // Assert
-            _contextMock.Verify(x => x.Set<TestEntity>().RemoveRange(entities), Times.Once);
+            _mockDbContext.Verify(x => x.Set<TestEntity>().RemoveRange(entities), Times.Once);
         }
 
         [Test]
@@ -101,8 +100,28 @@ namespace Scaffolding.Data.Test.Repo
             _repository.Dispose();
 
             // Assert
-            _contextMock.Verify(x => x.Dispose(), Times.Once);
+            _mockDbContext.Verify(x => x.Dispose(), Times.Once);
         }
+
+
+        #region Private
+        private static List<TestEntity> GenerateData()
+        {
+            var relatedEntity = new TestEntityRelation
+            {
+                Id = Guid.NewGuid(),
+                Name = "RelatedEntity"
+            };
+
+            // Arrange
+            return new List<TestEntity>
+            {
+                new TestEntity { Id = Guid.NewGuid(), Name = "One", CreatedDate = DateTime.UtcNow, Related = relatedEntity },
+                new TestEntity {Id = Guid.NewGuid(), Name = "Two", CreatedDate = DateTime.UtcNow, Related = relatedEntity },
+                new TestEntity {Id = Guid.NewGuid(), Name = "Three", CreatedDate = DateTime.UtcNow,Related = relatedEntity },
+            };
+        }
+        #endregion
 
 
     }
