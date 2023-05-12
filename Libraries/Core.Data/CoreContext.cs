@@ -46,8 +46,8 @@ namespace Core.Data
         #endregion
 
         #region public DbSet
-        public DbSet<UserDetail> UserDetails { get;}
-        public DbSet<LogEntry> LogEntries { get; }
+        public DbSet<UserDetail> UserDetails { get;} = default!;
+        public DbSet<LogEntry> LogEntries { get; } = default!;
         #endregion
 
         #region Override
