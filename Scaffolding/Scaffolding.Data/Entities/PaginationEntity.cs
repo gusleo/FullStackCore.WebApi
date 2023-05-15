@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Scaffolding.Data.Entities.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Scaffolding.Data.Entities
 {
-    public class PaginationEntity<T>
+    public class PaginationEntity<T> where T : IEntityBase
     {
+
         public int Page { get; set; }
         public int PageSize { get; set; }
 

@@ -39,9 +39,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Data", "Scaffol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Server", "Authorize.Server\Authorization.Server.csproj", "{68685412-0681-4C17-8EF8-3A842BD00B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffoling.Service.Test", "Scaffolding\Scaffoling.Service.Test\Scaffoling.Service.Test.csproj", "{59A9592A-658A-4AC6-9B3E-27B1BD6C0D74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffoling.Service.Test", "Scaffolding\Scaffoling.Service.Test\Scaffoling.Service.Test.csproj", "{59A9592A-658A-4AC6-9B3E-27B1BD6C0D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding.Auth.Test", "Scaffolding\Scaffolding.Auth.Test\Scaffolding.Auth.Test.csproj", "{FFBAF713-A750-4BFF-8FD0-DA7D54107C9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Auth.Test", "Scaffolding\Scaffolding.Auth.Test\Scaffolding.Auth.Test.csproj", "{FFBAF713-A750-4BFF-8FD0-DA7D54107C9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__Solution_Items", "__Solution_Items", "{E8D850B9-4A22-41C9-A933-1C4C0F735BCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeCoverage", "CodeCoverage", "{4F2A5098-94B7-4CED-BF69-F002C218E724}"
+	ProjectSection(SolutionItems) = preProject
+		codecoveragereport.bat = codecoveragereport.bat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service.Services.Test", "Libraries\Core.Service.Services.Test\Core.Service.Services.Test.csproj", "{B8394416-8856-4144-A2F3-EA609C26DBB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +122,10 @@ Global
 		{FFBAF713-A750-4BFF-8FD0-DA7D54107C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFBAF713-A750-4BFF-8FD0-DA7D54107C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFBAF713-A750-4BFF-8FD0-DA7D54107C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8394416-8856-4144-A2F3-EA609C26DBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8394416-8856-4144-A2F3-EA609C26DBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8394416-8856-4144-A2F3-EA609C26DBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8394416-8856-4144-A2F3-EA609C26DBB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +147,8 @@ Global
 		{70FD8114-1F17-4D9A-B475-ADBE27E0185D} = {EB0BD6A5-74CE-419D-9595-190429BC001E}
 		{59A9592A-658A-4AC6-9B3E-27B1BD6C0D74} = {EB0BD6A5-74CE-419D-9595-190429BC001E}
 		{FFBAF713-A750-4BFF-8FD0-DA7D54107C9E} = {EB0BD6A5-74CE-419D-9595-190429BC001E}
+		{4F2A5098-94B7-4CED-BF69-F002C218E724} = {E8D850B9-4A22-41C9-A933-1C4C0F735BCA}
+		{B8394416-8856-4144-A2F3-EA609C26DBB1} = {809CBF61-12DF-4085-9360-240A6BF61242}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F44E5DF-4A8C-4921-ABAC-FB203BB2C505}

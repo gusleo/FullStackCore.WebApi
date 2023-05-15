@@ -48,7 +48,7 @@ namespace Scaffolding.Data.Repo
         public virtual void Delete(T entity)
         {
             EntityEntry dbEntityEntry = _context.Entry<T>(entity);
-            if (dbEntityEntry.State != EntityState.Deleted)
+            if (dbEntityEntry != null && dbEntityEntry.State != EntityState.Deleted)
             {
                 dbEntityEntry.State = EntityState.Deleted;
             }
