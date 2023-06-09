@@ -6,6 +6,6 @@ namespace Core.Data.Infrastructure;
 
 public interface ICoreContext : IDataContext
 {
-    DbSet<UserDetail> UserDetails { get; }
-    DbSet<LogEntry> LogEntries { get; }
+    DbSet<UserDetail> UserDetails { get; set; }
+    DbSet<LogEntry> LogEntries { get; set; }
 }

@@ -46,8 +46,8 @@ namespace Core.Data
         #endregion
 
         #region public DbSet
-        public DbSet<UserDetail> UserDetails { get;} = default!;
-        public DbSet<LogEntry> LogEntries { get; } = default!;
+        public DbSet<UserDetail> UserDetails { get; set; } = default!;
+        public DbSet<LogEntry> LogEntries { get; set; } = default!;
         #endregion
 
         #region Override
@@ -68,8 +68,10 @@ namespace Core.Data
             }
 
 
-            // add the filter for "isDeleted" to all entity
-            // do not filter manually
+            // Filter for "isDeleted" to all entity based on IEntityBase
+            // do not filter manually, use HasQueryFilter instead
+            // modelBuilder.Entity<IEntityBase>().HasQueryFilter(x => !x.IsDeleted);            
+
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 // for entity derived from IEntityBase
@@ -85,7 +87,6 @@ namespace Core.Data
                     modelBuilder.Entity(entityType.ClrType).HasQueryFilter(lambda);
                 }
             }
-
 
             //Define manual which table will cascade delete
             //modelBuilder.Entity<ArticleComment>().HasOne(x => x.Article)
